@@ -250,6 +250,7 @@ footer a {
     position: fixed;
     top: 58vh;
     right: -5px;
+    background-color: white;
 }
 
 .top a {
@@ -261,15 +262,11 @@ footer a {
     position: fixed;
     top: 35%;
     right: -5px;
+    background-color: white;
 }
 
 .social a {
     display: block;
     font-size: 4rem;
     color: #3f6bca;
-}
-
-.social a i,
-.top a i {
-    background-color: white;
 }
