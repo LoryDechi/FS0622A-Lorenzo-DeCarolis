@@ -274,10 +274,6 @@ footer div:last-child {
         text-transform: capitalize;
     }
 
-    header nav ul li a:not(.button):hover {
-        text-decoration: underline;
-        color: #e42424;
-    }
 
     #menuIcon {
         display: none;
@@ -375,6 +371,11 @@ footer div:last-child {
 }
 
 @media screen and (min-width: 1170px) {
+    header nav ul li a:not(.button):hover {
+        text-decoration: underline;
+        color: #e42424;
+    }
+
     header {
         padding-right: 14%;
         padding-left: 24%;
