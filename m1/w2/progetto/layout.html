@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Pagina di layout header footer">
+  <title>Pagina di layout header footer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/stile.css">
+</head>
+
+<body>
+
+  <header>
+    <div id="logo">
+      <a href="index.html" title="Vai alla Home page">
+        <img src="assets/images/logo.png" alt="Logo Epicode">
+      </a>
+    </div>
+
+    <label for="menu" id="menuIcon">
+      <i class="lni lni-more-alt"></i>
+    </label>
+    <input type="checkbox" name="menu" id="menu">
+
+    <nav>
+      <ul>
+        <li><a href="index.html" title="Vai alla homepage">Home</a></li>
+        <li><a href="chi-siamo.html" title="Descrizione e mission di Epicode">Chi siamo</a></li>
+        <li><a href="contatti.html" title="Contattaci per info sui corsi">Contatti</a></li>
+        <li><a href="#" title="Registrati per accedere all'area riservata" class="button">Registrati</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <footer>
+    <section class="social flex">
+
+      <div>
+        <h4>Chi siamo</h4>
+        <p>Epicode School nasce con l’obiettivo di rivoluzionare la formazione in ambito tech.</p>
+      </div>
+
+      <div>
+        <h4>Ti piace ciò che vedi? Condividilo con i tuoi amici!</h4>
+        <nav>
+          <ul>
+            <li><a href="https://it-it.facebook.com/" target="_blank"><i class="lni lni-facebook-original"></i></a></li>
+            <li><a href="https://it.linkedin.com/" target="_blank"><i class="lni lni-linkedin-original"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="lni lni-instagram-filled"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <h4>Iscriviti alla nostra newsletter</h4>
+        <form method="post" action="backend.php">
+          <fieldset>
+            <input type="email" name="email" id="email" required>
+            <button type="submit" class="button">Va bene!</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <div class="resize">
+      <address>&copy; 2021 Epicode Web Developer school - Via Appia 1, 00100 Roma (RM) - Tel. 06-12345678</address>
+    </div>
+
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,445 @@
+/* IMPOSTAZIONI GENERALI */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+h3 {
+    line-height: 1;
+    font-size: 2rem;
+}
+
+h2 {
+    line-height: 1.1;
+    font-size: 3.5rem;
+}
+
+h1 {
+    color: white;
+    line-height: 1.2;
+    font-size: 4rem;
+}
+
+a:link,
+a:visited {
+    color: #e42424;
+    text-decoration: none;
+}
+
+.lni {
+    color: #e42424;
+    font-size: 2em;
+    margin-right: 5px;
+}
+
+.button:link,
+.button:visited {
+    color: white;
+}
+
+.button {
+    background: linear-gradient(to right, #6cc1e2, #392f7a);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset input {
+    height: 8vh;
+    margin-top: 15px;
+}
+
+
+/* HEADER */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1em;
+    box-shadow: 0px 5px 10px #d3d3d3;
+    position: sticky;
+    top: 0;
+    font-size: smaller;
+    z-index: 10;
+}
+
+nav ul li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+/* DROPDOWN MENU */
+#menu {
+    display: none;
+}
+
+header nav {
+    padding-left: 1.5em;
+    transition: all 0.5s;
+    overflow: hidden;
+    height: 0;
+    flex-basis: 100%;
+}
+
+input[type="checkbox"]:checked+nav {
+    height: 160px;
+}
+
+/* MAIN */
+main p {
+    font-size: 0.8em;
+    margin: 1.5em 0;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+#banner {
+    position: relative;
+    text-shadow: 0 0 10px black;
+    padding: 1.5em;
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* AGGIUNTA PER FAVORIRE LA LETTURA DEL TESTO */
+#banner::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+#banner h1,
+#banner p,
+#banner .button {
+    position: relative;
+}
+
+#banner p {
+    color: white;
+}
+
+#banner .button {
+    animation: animazione 1s infinite ease-in-out;
+}
+
+#mainContent div {
+    width: 90%;
+    margin: 2em auto 0 auto;
+    text-align: center;
+}
+
+/* SECTION SCRIVICI */
+#scrivici {
+    background-color: #0c0633;
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+/* SECTION AIM */
+.container {
+    text-align: center;
+    width: 80%;
+    margin: 2em auto 1em auto;
+}
+
+.imgContainer img {
+    width: 100%;
+}
+
+.smile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smile:first-of-type {
+    margin-top: 1em;
+}
+
+/* CONTATTI */
+
+fieldset textarea {
+    margin: 15px 0;
+    height: 15vh;
+    padding: 15px;
+    font-style: italic;
+}
+
+.contatti .button {
+    width: 70%;
+    height: 8vh;
+    font-size: 1em;
+    margin: 15px auto;
+}
+
+/* TABELLA */
+#table {
+    margin-bottom: 3em;
+}
+
+table caption {
+    font-size: 1.3em;
+}
+
+table thead {
+    display: none
+}
+
+
+table td {
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+    padding: 5px 0 0 5px
+}
+
+table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #d2dce7;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: rgb(238, 238, 238);
+    padding: 1em 2em;
+}
+
+.social nav ul {
+    display: flex;
+    margin-top: 1.5em;
+}
+
+footer h4 {
+    line-height: 1;
+    font-size: 1.1em;
+}
+
+footer p {
+    font-size: 0.8em;
+    margin: 1.5em 0;
+}
+
+footer .button {
+    height: 8vh;
+    font-size: 1.9rem;
+}
+
+footer div {
+    margin-top: 1.5em;
+}
+
+footer div:last-child {
+    font-size: 0.8em;
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 768px) {
+
+    header a:link,
+    header a:visited {
+        color: black;
+        text-decoration: none;
+        font-size: 0.9em;
+        text-transform: capitalize;
+    }
+
+    header nav ul li a:not(.button):hover {
+        text-decoration: underline;
+        color: #e42424;
+    }
+
+    #menuIcon {
+        display: none;
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    header nav {
+        flex-basis: 55%;
+        overflow: visible;
+    }
+
+    header nav ul li {
+        margin-right: 10px;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .social div {
+        flex-basis: 30%;
+    }
+
+
+    table thead {
+        background-color: rgb(65, 154, 184);
+        display: table-header-group;
+    }
+
+    table thead tr th {
+        padding: 15px;
+    }
+
+    table td {
+        margin: 1em;
+        padding: 1em;
+        text-align: center;
+        display: table-cell;
+    }
+
+    table td table th {
+        padding: 0.5em;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    table td::before {
+        display: none;
+    }
+
+    /* CONTATTI */
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex .container {
+        flex-basis: 45%;
+    }
+
+    /* INDEX */
+    #aim .imgContainer {
+        margin-right: 25px;
+        max-width: 50%;
+    }
+
+    .smile {
+        justify-content: flex-start;
+    }
+
+    #aim .flex {
+        justify-content: center;
+    }
+
+    .left {
+        font-size: 0.6em;
+        text-align: left;
+    }
+
+    .resize {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    footer .lni {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    header {
+        padding-right: 14%;
+        padding-left: 24%;
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    #banner>div {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #mainContent .flex div {
+        flex-basis: 25%;
+    }
+
+    #mainContent .flex p {
+        text-align: left;
+    }
+
+    .social {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    .resize {
+        width: 60%;
+        margin: 25px auto;
+    }
+
+    /* CHI SIAMO */
+    .flex .container {
+        flex-basis: 30%;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+
+    /* CONTATTI */
+    .contatti .flex .container {
+        flex-basis: 45%;
+    }
+}
+
+@keyframes animazione {
+    0% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    25% {
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    50% {
+        box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+}
