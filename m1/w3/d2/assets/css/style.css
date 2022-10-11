@@ -8,6 +8,15 @@ h1 {
     color: white;
 }
 
+/* body originale del layout proposto dal prof */
+/* body {
+    height: 100%;
+    background: linear-gradient(-45deg, #D75F1A, #B93611, #D65E1A);
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 4em;
+} */
+
 #myVideo {
     position: fixed;
     right: 0;
