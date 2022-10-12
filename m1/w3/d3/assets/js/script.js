@@ -59,7 +59,7 @@ btn.addEventListener('click', function () {
 
 function totaleSpesa() {
     let somma = cibo + detersivi + abiti;
-    document.getElementById('totale').innerHTML += somma;
+    document.getElementById('totale').innerHTML = `Il totale spesa è: &euro; ${somma}`;
     cancellaForm();
 }
 
