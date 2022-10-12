@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee5252, #d8457d, #159bcb, #2dc4a0);
+    background-size: 400% 400%;
+    text-align: center;
+    line-height: 3em;
+    color: rgb(27, 26, 26);
+    animation: gradient 10s ease infinite;
+}
+
+fieldset {
+    margin-left: 20em;
+    margin-right: 20em;
+    border: 2px solid white;
+    margin-top: 2em;
+}
+
+#totale {
+    text-transform: uppercase;
+    margin-left: 20em;
+    margin-right: 20em;
+    border: 2px solid white;
+    margin-top: 0.5em;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
