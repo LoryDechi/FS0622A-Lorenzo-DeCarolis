@@ -5,12 +5,17 @@
 }
 
 body {
+    background: linear-gradient(-45deg, #D75F1A, #B93611, #D65E1A);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 5em;
+}
+
+h1 {
+    color: white;
 }
 
 li {
