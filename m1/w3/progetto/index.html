@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prima calcolatrice creata con JavaScript">
+    <title>La mia prima calcolatrice in JS</title>
+    <link rel="shortcut icon" href="assets/imgs/calcolatrice.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="body">
+
+    <h1 id="scritta">Benvenuto nella mia prima calcolatrice con JS <br>
+        Premi ON per accenderla</h1>
+
+    <main id="calc" class="calcolatrice ">
+
+        <div>
+            <input type="text" name="display" id="display" class="displayOff" placeholder="0" readonly>
+        </div>
+
+        <div id="comandi">
+            <button class="onOff" onclick="on()">ON</button>
+            <button class="onOff" onclick="off()">OFF</button>
+            <button id="dark" onclick="darkMode()">&#9790;</button>
+            <button id="light" onclick="lightMode()">&#9728;</button>
+        </div>
+
+        <div id="tastiera">
+            <div class="tasti">
+                <button class="controlli" onclick="reset()">C</button>
+                <button class="controlli" onclick="cancella()">CE</button>
+                <button id="radice" class="controlli" onclick="calcoloRadice()">&#8730;</button>
+                <button id="**" class="controlli" onclick="insertId(this.id)">x<sup>x</sup></button>
+            </div>
+
+            <div class="tasti">
+                <button id="7" onclick="insertId(this.id)">7</button>
+                <button id="8" onclick="insertId(this.id)">8</button>
+                <button id="9" onclick="insertId(this.id)">9</button>
+                <button id="/" class="controlli" onclick="insertId(this.id)">:</button>
+            </div>
+
+            <div class="tasti">
+                <button id="4" onclick="insertId(this.id)">4</button>
+                <button id="5" onclick="insertId(this.id)">5</button>
+                <button id="6" onclick="insertId(this.id)">6</button>
+                <button id="*" class="controlli" onclick="insertId(this.id)">X</button>
+            </div>
+
+            <div class="tasti">
+                <button id="1" onclick="insertId(this.id)">1</button>
+                <button id="2" onclick="insertId(this.id)">2</button>
+                <button id="3" onclick="insertId(this.id)">3</button>
+                <button id="-" class="controlli" onclick="insertId(this.id)">-</button>
+            </div>
+
+            <div class="tasti">
+                <button id="." class="controlli" onclick="insertId(this.id)">.</button>
+                <button id="0" onclick="insertId(this.id)">0</button>
+                <button id="equal" class="controlli equal" onclick="risultato()">=</button>
+                <button id="+" class="controlli" onclick="insertId(this.id)">+</button>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

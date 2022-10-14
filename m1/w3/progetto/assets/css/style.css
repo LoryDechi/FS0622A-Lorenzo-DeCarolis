@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    opacity: 0;
+    animation: moveup 0.5s linear forwards;
+}
+
+.calcolatrice {
+    opacity: 0;
+    width: 250px;
+    height: 440px;
+    padding: 15px 15px;
+    background-color: #6d7979;
+    border-radius: 15px;
+    box-shadow: 0px 0px 45px 15px #999999;
+    animation: moveup 0.5s linear forwards;
+    animation-delay: 1s;
+}
+
+
+#comandi {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+#calc button:hover {
+    background-color: #a4a5a6;
+}
+
+#comandi button {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.5em;
+    background-color: transparent;
+}
+
+#comandi .onOff {
+    margin: 0 0;
+    border-radius: 15px;
+    width: 50px;
+    font-size: 1.3em;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.576);
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    text-align: right;
+    font-size: 1.5em;
+    padding-right: 5px;
+    border-radius: 15px;
+    background-color: #03C701;
+    margin: 10px 0;
+}
+
+::placeholder {
+    color: #101010;
+}
+
+
+.tasti {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasti button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    border: none;
+    background-color: #dbe7eb;
+}
+
+.tasti .controlli {
+    background-color: rgba(241, 187, 87, 0.808);
+}
+
+.tasti .equal {
+    background-color: #5555ff;
+    color: white;
+}
+
+/* animazione */
+@keyframes moveup {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+/* stile off */
+#calc .displayOff {
+    background-color: #101010;
+    color: #101010;
+}
+
+/* dark mode style */
+
+.darkBody {
+    background-color: #434343;
+}
+
+.darkScritta {
+    color: white;
+}
+
+.darkComands button {
+    color: white;
+}
+
+.darkCalc {
+    background-color: #101010;
+    box-shadow: 0px 0px 45px 15px #f6f5f5;
+}
+
+.dark button {
+    background-color: #222222;
+    color: white;
+}
+
+.dark .controlli {
+    background-color: #005755;
+}
