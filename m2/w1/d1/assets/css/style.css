@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    line-height: 2em;
+}
+
+h1 {
+    text-align: center;
+    padding: 0 50px;
+    line-height: 2em;
+}
+
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+A:hover {
+    color: blueviolet;
+}
