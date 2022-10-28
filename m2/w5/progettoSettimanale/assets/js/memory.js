@@ -54,7 +54,7 @@ function startGame() {
     // aggiunta eventlistner sulle icone
     var icons = document.querySelectorAll('.icon')
     for (var i = 0; i < icons.length; i++) {
-        icons[i].className = ' icon show';
+        icons[i].className = ' icon show disabled';
         icons[i].addEventListener("click", displayIcon);
         icons[i].addEventListener("click", victory);
     }
