@@ -138,7 +138,7 @@ function victory() {
 // FUNZIONE CHE PERMETTE DI GIOCARE ANCORA
 function playAgain() {
     modal.classList.remove('active');
-    document.getElementById('score').innerHTML += 'Tempo precedente: ' + tempo;
+    document.getElementById('score').innerHTML = 'Tempo precedente: ' + tempo;
     startGame();
 }
 
