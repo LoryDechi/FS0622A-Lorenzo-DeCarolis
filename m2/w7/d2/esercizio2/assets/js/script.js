@@ -3,8 +3,6 @@ class User {
         this.items = _items;
         this.pageSize = _pageSize;
     }
-
-
 }
 
 let table = document.getElementById('table');
