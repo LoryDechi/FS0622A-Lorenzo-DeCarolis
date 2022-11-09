@@ -1,0 +1,62 @@
+{
+    "studenti": [
+        {
+            "id": 1,
+            "nome": "Lorenzo",
+            "cognome": "De Carolis",
+            "status": "Studente"
+        },
+        {
+            "id": 2,
+            "nome": "Ilaria",
+            "cognome": "Cognata",
+            "status": "Studente"
+        },
+        {
+            "id": 3,
+            "nome": "Giulia",
+            "cognome": "Franzosi",
+            "status": "Studente"
+        },
+        {
+            "id": 4,
+            "nome": "Davide",
+            "cognome": "Alfonsi",
+            "status": "Studente"
+        },
+        {
+            "id": 5,
+            "nome": "Lorenzo",
+            "cognome": "Altomonte",
+            "status": "Studente"
+        },
+        {
+            "id": 6,
+            "nome": "Andrea",
+            "cognome": "Cursi",
+            "status": "Studente"
+        }
+    ],
+    "Supereroi": [
+        {
+            "id": 1,
+            "nome": "Iron Man",
+            "colore": "Rosso"
+        },
+        {
+            "id": 2,
+            "nome": "Hulk",
+            "colore": "Verde"
+        },
+        {
+            "id": 3,
+            "nome": "Black Panter",
+            "colore": "Nero"
+        },
+        {
+            "id": 4,
+            "nome": "Captain America",
+            "colore": "Blu"
+        }
+    ]
+}
