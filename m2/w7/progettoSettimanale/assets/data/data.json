@@ -1,0 +1,29 @@
+{
+  "elenco": [
+    {
+      "nome": "Ilaria",
+      "cognome": "Cognata",
+      "id": 2
+    },
+    {
+      "nome": "Davide",
+      "cognome": "Alfonsi",
+      "id": 3
+    },
+    {
+      "nome": "Lorenzo",
+      "cognome": "Altomonte",
+      "id": 4
+    },
+    {
+      "nome": "Andrea",
+      "cognome": "Cursi",
+      "id": 5
+    },
+    {
+      "nome": "Lorenzo",
+      "cognome": "De Carolis",
+      "id": 7
+    }
+  ]
+}
