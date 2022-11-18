@@ -1,12 +1,11 @@
 var estratto;
 var giocatore1;
 var giocatore2;
-window.addEventListener('DOMContentLoaded', init)
+window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-    estrazione();
+    estrazione()
 }
-
 function estrazione() {
     giocatore1 = Math.floor((Math.random() * 100) + 1);
     giocatore2 = Math.floor((Math.random() * 100) + 1);
