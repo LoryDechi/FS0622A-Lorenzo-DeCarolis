@@ -10,5 +10,5 @@ export class TodoServiceService {
 }
 
 export async function getTodos(): Promise<Todo[]> {
-  return await (await fetch('http://localhost:3000/todos')).json()
+  return await (await fetch('assets/db.json')).json()
 }
