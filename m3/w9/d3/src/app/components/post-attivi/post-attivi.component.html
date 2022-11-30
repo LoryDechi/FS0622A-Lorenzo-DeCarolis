@@ -1,0 +1,7 @@
+<div *ngFor="let post of posts; let i =index">
+    <div *ngIf="post.active">
+        <app-app-card [post]="post">
+            <button (click)="disattivaPost(post.id,i)" class="btn btn-primary">DISATTIVA</button>
+        </app-app-card>
+    </div>
+</div>
