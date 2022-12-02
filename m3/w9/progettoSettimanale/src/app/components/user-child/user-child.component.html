@@ -1,0 +1,9 @@
+<div *ngIf="users[0]; else elseBlock">
+    <h3>{{users[0].name}}</h3>
+
+    <p>Email: {{users[0].email}}</p>
+    <p>Ruolo: {{users[0].role}}</p>
+</div>
+<ng-template #elseBlock>
+    <h2>Utente non trovato</h2>
+</ng-template>

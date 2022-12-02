@@ -1,0 +1,13 @@
+<div class="container text-center">
+    <div *ngIf="det[0]; else elseErr">
+        <h1>{{det[0].title}}</h1>
+
+        <p>{{det[0].body}}</p>
+        <p>Categoria: {{det[0].type}}</p>
+        <p>Autore: {{det[0].author}}</p>
+    </div>
+
+    <ng-template #elseErr>
+        <h1>Prodotto non trovato!</h1>
+    </ng-template>
+</div>

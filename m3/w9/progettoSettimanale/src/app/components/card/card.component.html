@@ -1,0 +1,9 @@
+<div class="card"
+    [ngClass]="{'bg-warning': post.type == 'news', 'bg-info': post.type == 'education', 'bg-secondary': post.type == 'politic'}">
+    <h5 class="card-header"> <span appEvidenzia [defaultColor]="'yellow'"> Post n: {{post.id}}</span></h5>
+    <div class="card-body">
+        <h5 class="card-title">{{ post.title | maiuscolo}}</h5>
+        <p class="card-text">{{post.body}}</p>
+        <ng-content></ng-content>
+    </div>
+</div>

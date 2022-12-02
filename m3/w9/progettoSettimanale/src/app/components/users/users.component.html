@@ -1,0 +1,9 @@
+<div class="container">
+    <ul class="list-unstyled list-group">
+        <li *ngFor="let user of users" class="list-group-item list-group-item-action" [routerLink]="[user.id]"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            {{user.name}}</li>
+    </ul>
+</div>
+<hr>
+<router-outlet></router-outlet>
