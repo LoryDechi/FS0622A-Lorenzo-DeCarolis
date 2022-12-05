@@ -1,0 +1,10 @@
+<div class="container row mt-5">
+    <h1 class="text-center">FOTO</h1>
+    <p class="text-center">Mi Piace: {{count}}</p>
+    <div *ngFor="let f of foto; let i = index" class="col-6 mt-5">
+        <img src="{{f.avatar}}">
+        <button class="btn btn-danger" (click)="cancella(f.id)">ELIMINA</button>
+        <button class="btn btn-success" (click)="miPiace()">MI PIACE</button>
+    </div>
+
+</div>
