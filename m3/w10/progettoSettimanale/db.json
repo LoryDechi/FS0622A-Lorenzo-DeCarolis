@@ -1,23 +1,23 @@
 {
   "users": [
     {
-      "email": "prova@hotmail.it",
-      "password": "$2a$10$3pdAWnS540oo72lECAYSyewJGaM6cCNMQOKO/tBaRUwOCXwYPGe7u",
-      "name": "wadawd",
-      "id": 1
-    },
-    {
       "email": "prova1@hotmail.it",
       "password": "$2a$10$qD8/OOtYhsIxOfL6vl4fIeW0IzBLQs7p59RVk5GTciBDAoMZKxyGa",
       "name": "lorenzo",
       "id": 2
+    },
+    {
+      "email": "prova@hotmail.it",
+      "password": "$2a$10$nBIamyUfiSeYG9.Imnvu.u1XTuQhphdjVtTiyadtsliznmBkdCp1G",
+      "name": "Lorenzo",
+      "id": 3
     }
   ],
   "favorites": [
     {
-      "movieId": 567189,
-      "userId": 2,
-      "id": 1
+      "movieId": 460465,
+      "userId": 3,
+      "id": 6
     }
   ],
   "genres": [

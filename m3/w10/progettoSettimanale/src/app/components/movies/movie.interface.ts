@@ -17,5 +17,12 @@ export interface Movie {
 
 export interface favMovie {
     movieId: number,
-    userId: number
+    userId: number,
+    id?: number
+}
+
+export interface DashMovie {
+    data: Movie[],
+    fav: any
+
 }

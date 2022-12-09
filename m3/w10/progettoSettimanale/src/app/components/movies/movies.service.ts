@@ -24,7 +24,17 @@ export class MoviesService {
   getMovies() {
     return this.http.get<Movie[]>('http://localhost:4201/api/movie/popular').pipe(catchError((err) => {
       this.dataSubj.next(false)
-      throw new Error('GET fallita')
+      throw new Error('GET movie fallita')
+    }));
+  }
+
+  getFav() {
+    let takeUser: any = localStorage.getItem('user')
+    let user = JSON.parse(takeUser)
+    let uId = user.user.id
+    return this.http.get<favMovie[]>(`http://localhost:4201/favorites?userId=${uId}`).pipe(catchError((err) => {
+      this.dataSubj.next(false)
+      throw new Error('GET fav fallita')
     }));
   }
 
@@ -44,6 +54,15 @@ export class MoviesService {
       throw err
     }))
 
+
+  }
+
+  removeFavorite(mId: number) {
+    let takeUser: any = localStorage.getItem('user')
+    let user = JSON.parse(takeUser)
+    let uId = user.user.id
+
+    return this.http.delete(`http://localhost:4201/favorites/${mId}`)
 
   }
 

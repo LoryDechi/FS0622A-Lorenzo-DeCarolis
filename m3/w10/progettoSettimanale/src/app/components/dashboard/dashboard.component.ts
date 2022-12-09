@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
+import { ProfiloService } from '../profilo/profilo.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,9 +9,16 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private authSrv: AuthService) { }
+  user: any
+  name: string = ''
+  constructor(private authSrv: AuthService, private profiloSrv: ProfiloService) { }
 
   ngOnInit(): void {
+    this.user = this.profiloSrv.getUser()
+    console.log(this.user);
+    var maiusc = this.user.user.name.charAt(0).toUpperCase() + this.user.user.name.slice(1);
+    this.name = maiusc
+
   }
 
 

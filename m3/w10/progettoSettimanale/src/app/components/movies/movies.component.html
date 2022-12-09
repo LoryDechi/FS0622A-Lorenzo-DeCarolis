@@ -1,11 +1,6 @@
 <div class="container-fluid" id="grid">
-    <mat-card class="example-card" *ngFor="let m of movies; let i = index">
-        <img mat-card-image src="http://image.tmdb.org/t/p/w500/{{m.poster_path}}">
-
-        <mat-card-actions>
-            <!-- <mat-card-title>{{m.title}}</mat-card-title> -->
-            <button mat-button (click)="addFav(m.id, i)">LIKE</button>
-        </mat-card-actions>
+    <mat-card class="example-card" *ngFor="let m of prova.data; let i = index">
+        <app-card [m]="m" [i]="i"></app-card>
     </mat-card>
 
 </div>

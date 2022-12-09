@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from './movie.interface';
+import { DashMovie, favMovie, Movie } from './movie.interface';
 import { MoviesService } from './movies.service';
 
 @Component({
@@ -9,27 +9,20 @@ import { MoviesService } from './movies.service';
 })
 export class MoviesComponent implements OnInit {
 
-  movies: Movie[] = [];
 
+  prova: DashMovie = {
+    data: [],
+    fav: []
+  }
   constructor(private movieSrv: MoviesService) { }
 
   ngOnInit(): void {
     this.movieSrv.getMovies().subscribe((res) => {
-      this.movies = res
-      console.log(this.movies);
+      this.prova.data = res
     })
-  }
-
-  addFav(idM: number, i: number) {
-    this.movieSrv.addFavorite(idM).subscribe(res => {
-      console.log(res);
-
+    this.movieSrv.getFav().subscribe((res) => {
+      let x = this.prova.fav.push(res)
     })
-    // this.movies[i] = { ...this.movies[i], favId: newFav.id }
-  }
 
-  //   removeFav(idF: number, i: number) {
-  //     this.movieSrv.removeFavorite(idF)
-  //     this.movies[i] = { ...this.movies[i], favId: undefined }
-  //   }
+  }
 }

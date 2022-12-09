@@ -22,6 +22,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProfiloComponent } from './components/profilo/profilo.component';
     LoginComponent,
     DashboardComponent,
     MoviesComponent,
-    ProfiloComponent
+    ProfiloComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
