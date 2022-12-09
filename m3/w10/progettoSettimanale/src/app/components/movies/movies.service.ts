@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/auth/auth.service';
 import { AuthResponse } from 'src/app/auth/auth-response.interface';
 import { catchError, ReplaySubject } from 'rxjs';
-import { Movie } from './movie.interface';
+import { favMovie, Movie } from './movie.interface';
 
 
 @Injectable({
@@ -28,11 +28,22 @@ export class MoviesService {
     }));
   }
 
-  addFavorite(id: number) {
+  addFavorite(mId: number) {
     let takeUser: any = localStorage.getItem('user')
     let user = JSON.parse(takeUser)
-    let userId = user.user.id
-    console.log(userId);
+    let uId = user.user.id
+
+    let newFav: favMovie = {
+      movieId: mId,
+      userId: uId
+    }
+
+
+    return this.http.post<favMovie>('http://localhost:4201/favorites', newFav).pipe(catchError(err => {
+      console.log(err);
+      throw err
+    }))
+
 
   }
 

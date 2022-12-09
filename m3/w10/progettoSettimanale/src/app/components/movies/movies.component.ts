@@ -21,7 +21,10 @@ export class MoviesComponent implements OnInit {
   }
 
   addFav(idM: number, i: number) {
-    const newFav = this.movieSrv.addFavorite(idM)
+    this.movieSrv.addFavorite(idM).subscribe(res => {
+      console.log(res);
+
+    })
     // this.movies[i] = { ...this.movies[i], favId: newFav.id }
   }
 
