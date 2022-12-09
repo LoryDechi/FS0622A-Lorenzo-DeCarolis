@@ -1,0 +1,33 @@
+.example-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #555;
+}
+
+mat-drawer {
+    width: 20%;
+
+    h2 {
+        margin: 28px 0;
+        font-size: 2em;
+    }
+
+    button {
+        margin-top: 10px;
+        font-size: 1.2em;
+        display: block;
+        width: 100%;
+    }
+}
+
+.header {
+    background-color: #E91E63;
+    height: 85px;
+    font-size: 2em;
+    line-height: 85px;
+    padding-left: 20px;
+}
+
+.active {
+    text-decoration: underline red;
+}

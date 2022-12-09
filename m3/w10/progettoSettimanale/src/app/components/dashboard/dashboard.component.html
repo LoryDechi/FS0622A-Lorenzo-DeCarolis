@@ -1,0 +1,13 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <h2 class="text-center">Menu</h2>
+
+        <button mat-button [routerLink]="['/dashboard/movies']" routerLinkActive="active">Movies</button>
+        <button mat-button [routerLink]="['/dashboard/profilo']" routerLinkActive="active">Profilo</button>
+        <button mat-button (click)="logout()" class="text-danger">Esci</button>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="header">Movies</div>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
