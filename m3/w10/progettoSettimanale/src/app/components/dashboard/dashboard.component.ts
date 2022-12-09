@@ -15,7 +15,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.profiloSrv.getUser()
-    console.log(this.user);
     var maiusc = this.user.user.name.charAt(0).toUpperCase() + this.user.user.name.slice(1);
     this.name = maiusc
 

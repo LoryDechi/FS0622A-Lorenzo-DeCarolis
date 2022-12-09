@@ -48,12 +48,10 @@ export class MoviesService {
       userId: uId
     }
 
-
     return this.http.post<favMovie>('http://localhost:4201/favorites', newFav).pipe(catchError(err => {
       console.log(err);
       throw err
     }))
-
 
   }
 
@@ -63,7 +61,15 @@ export class MoviesService {
     let uId = user.user.id
 
     return this.http.delete(`http://localhost:4201/favorites/${mId}`)
+  }
 
+  dettaglio(id: number) {
+    console.log(id);
+
+    return this.http.get<Movie[]>('http://localhost:4201/api/movie/popular/' + id).pipe(catchError((err) => {
+      this.dataSubj.next(false)
+      throw new Error('GET movie fallita')
+    }));
   }
 
 

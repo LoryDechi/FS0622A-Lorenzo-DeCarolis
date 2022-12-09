@@ -23,6 +23,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 import { CardComponent } from './components/card/card.component';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CardComponent } from './components/card/card.component';
     DashboardComponent,
     MoviesComponent,
     ProfiloComponent,
-    CardComponent
+    CardComponent,
+    DettaglioComponent
   ],
   imports: [
     BrowserModule,

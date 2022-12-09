@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes, Route } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 import { LoginComponent } from './components/login/login.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'profilo',
         component: ProfiloComponent
+      },
+      {
+        path: ':id',
+        component: DettaglioComponent
       }
     ]
   },
