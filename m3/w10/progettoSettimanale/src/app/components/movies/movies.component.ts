@@ -9,20 +9,13 @@ import { MoviesService } from './movies.service';
 })
 export class MoviesComponent implements OnInit {
 
+  movies!: Movie[]
 
-  prova: DashMovie = {
-    data: [],
-    fav: []
-  }
   constructor(private movieSrv: MoviesService) { }
 
   ngOnInit(): void {
     this.movieSrv.getMovies().subscribe((res) => {
-      this.prova.data = res
+      this.movies = res
     })
-    this.movieSrv.getFav().subscribe((res) => {
-      let x = this.prova.fav.push(res)
-    })
-
   }
 }

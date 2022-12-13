@@ -11,10 +11,9 @@ import { MoviesService } from '../movies/movies.service';
 export class CardComponent implements OnInit {
 
   @Input() m!: Movie;
-  @Input() i!: number;
 
   favorites!: any
-  isFav: boolean = false;
+  isFav!: boolean
   filt: any
 
   constructor(private movieSrv: MoviesService) { }
@@ -40,19 +39,8 @@ export class CardComponent implements OnInit {
 
 
 
-  addFav(idM: number, i: number) {
-    this.movieSrv.getFav().subscribe((res) => {
-      this.favorites = res
-      let x = this.favorites.find((f: any) => f.movieId == this.m.id)
-      if (x) {
-        this.isFav = true
-        this.filt = x
-
-      } else {
-        this.isFav = false
-      }
-
-    })
+  addFav(idM: number) {
+    this.getFavorite()
     this.movieSrv.addFavorite(idM).subscribe(res => {
       console.log(res);
       this.isFav = true

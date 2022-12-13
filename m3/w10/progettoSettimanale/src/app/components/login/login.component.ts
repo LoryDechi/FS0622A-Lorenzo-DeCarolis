@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       }
       throw err
     })).subscribe(res => {
-      this.router.navigate(['/dashboard/movies'])
+      this.router.navigate(['/movies'])
     })
   }
 

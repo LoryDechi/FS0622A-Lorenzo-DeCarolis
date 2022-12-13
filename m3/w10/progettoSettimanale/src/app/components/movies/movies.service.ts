@@ -56,10 +56,6 @@ export class MoviesService {
   }
 
   removeFavorite(mId: number) {
-    let takeUser: any = localStorage.getItem('user')
-    let user = JSON.parse(takeUser)
-    let uId = user.user.id
-
     return this.http.delete(`http://localhost:4201/favorites/${mId}`)
   }
 

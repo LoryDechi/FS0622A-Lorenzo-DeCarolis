@@ -1,7 +1,7 @@
 <img mat-card-image src="http://image.tmdb.org/t/p/w500/{{m.poster_path}}">
 
 <mat-card-content>
-    <button class="fs-2" mat-button (click)="isFav ? removeFav() : addFav(m.id, i)"
+    <button class="fs-2" mat-button (click)="isFav ? removeFav() : addFav(m.id)"
         [color]=" isFav ? 'warn': ''">&#9829;</button>
     <button mat-button [routerLink]="['/'+ m.id]">Dettagli</button>
 </mat-card-content>
