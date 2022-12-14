@@ -40,10 +40,10 @@ export class CardComponent implements OnInit {
 
 
   addFav(idM: number) {
-    this.getFavorite()
     this.movieSrv.addFavorite(idM).subscribe(res => {
       console.log(res);
       this.isFav = true
+      this.getFavorite()
     })
   }
 
